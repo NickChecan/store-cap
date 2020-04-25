@@ -27,5 +27,6 @@ Learn more at https://cap.cloud.sap/docs/get-started/
 ## Important Commands...
 Deploy data model to the database instance:
 - $ cds deploy --to sqlite:db/my-company.db
+
 Run application and watch for any changes:
 - $ cds watch
