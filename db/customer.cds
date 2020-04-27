@@ -11,11 +11,14 @@ type Address {
     postcode     : Integer;
 }
 
-entity Store {
+entity Customer {
     key ID       : Integer;
-    name         : String not null;
-    @Comment : 'Type of store'
-    segment      : String;
+    forename     : String not null;
+    surname      : String not null;
+    @Comment     : 'SSA (US) or RG (BR) number'
+    socialId     : String;
+    phone        : String;
+    email        : String;
     creationDate : Date;
     address      : Address;
     transactions : Association[*] to Transaction.Header on transactions.ID = ID;

@@ -1,16 +1,16 @@
 namespace my.company;
 
 using {managed} from '@sap/cds/common';
-using my.company.Store from './store';
+using my.company.Customer from './customer';
 using my.company.Product from './product';
 
 context Transaction {
 
     entity Header : managed {
-        key ID : Integer;
-        date   : Date not null;
-        store  : Association[1] to Store { ID };
-        items  : Association[*] to Item on items.header.ID = ID;
+        key ID   : Integer;
+        date     : Date not null;
+        customer : Association[1] to Customer { ID };
+        items    : Association[*] to Item on items.header.ID = ID;
     }
 
     entity Item {

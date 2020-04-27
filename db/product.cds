@@ -4,6 +4,7 @@ using my.company.Transaction from './transaction';
 
 entity Product {
     key ID           : Integer;
+    @title: '{i18n>product.name}'
     name             : String not null;
     segment          : String;
     @Comment         : 'Gross Price'
