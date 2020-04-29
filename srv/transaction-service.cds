@@ -9,7 +9,7 @@ service TransactionService @(path:'/transaction') {
     // Constraints resolved through annotation
     entity Headers @(
         title: '{i18n>headerService}', 
-        // Capabilities are equivalent to @readonly annotation
+        // Capabilities are equivalent to annotation usage
         Capabilities: {
             insertRestriction: {Insertable: true},
             UpdateRestriction: {Updatable: false},
